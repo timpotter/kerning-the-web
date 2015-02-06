@@ -1,0 +1,53 @@
+<!--
+
+The font-kerning CSS property controls the usage of the kerning information; that is, it controls how letters are spaced. The kerning information is stored in the font, and if the font is well-kerned, this feature allows spacing between characters to be very similar, whatever the characters are - https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning
+
+Currently there is limited browser support for font-kerning.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Kerning with CSS</title>
+	<style>
+		body {
+            font-family: Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 160px;
+            line-height: 0.15em;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        
+        /* Layout - Ignore the code below this comment */
+        
+        figcaption {
+            border-top: 1px solid #ececec;
+            color: #ccc;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-top: 20px;
+        }
+        
+        
+	</style>
+</head>
+<body>
+    
+   <figure>
+        <h1>Advantage</h1>
+        <figcaption>Without CSS3 Font Kerning</figcaption>
+    </figure>
+    
+    <figure>
+        <h1>Advantage</h1>
+        <figcaption>With CSS3 Font Kerning</figcaption>
+    </figure>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- 
+
+The text-rendering property is not defined in any CSS standard. It's actually an SVG property. However, Gecko/WebKit/Blink browsers let you apply this property to HTML elements. There are however significant, effectively fatal performance problems (such as 30-second loading delays, or longer) on mobile devices when using optimizeLegibility for long pages. Apply it only if you know what the maximum text length will be - http://css-tricks.com/almanac/properties/t/text-rendering 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Kerning with CSS</title>
+	<style>
+		body {
+            font-family: Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 160px;
+            line-height: 0.15em;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        
+        /* Layout - Ignore the code below this comment */
+        
+        figcaption {
+            border-top: 1px solid #ececec;
+            color: #ccc;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-top: 20px;
+        }
+        
+        
+	</style>
+</head>
+<body>
+  
+   <figure>
+        <h1>Advantage</h1>
+        <figcaption>Without Text Rendering</figcaption>
+    </figure>
+    
+    <figure>
+        <h1>Advantage</h1>
+        <figcaption>With Text Rendering</figcaption>
+    </figure>
+    
+</body>
+</html>
