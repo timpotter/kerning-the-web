@@ -1,6 +1,6 @@
 # Kerning the Web
 
-Various methods of kerning web type as part of the @ixdbelfast AAD117 module.
+Various methods of kerning web typography as part of the @ixdbelfast AAD117 - Exploring Identity module.
 
 ##Kerning with CSS
 
@@ -40,4 +40,3 @@ In this example we'll work through kerning type using [JQuery](http://jquery.com
 + Final Exercise with Kerning (Link your work here)
 
 __Note:__ Kerning with Javascript offers a great way to take control of your web typography. There are many great features baked in that makes life easier, like transforming letters and positioning. The downside is the payload of these scripts increase the page load and the rendered HTML wraps the letters in ```<span>```'s and inline CSS.
-
