@@ -3,19 +3,20 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Kerning with CSS</title>
-	<!-- Add JQuery - a neat JavaScript library that allows you to do cool things -->
-	<!-- Add Kerning.js script from http://kerningjs.com/ -->
-	
 	<style>
 		body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: Georgia, Times, 'Times New Roman', serif;
             text-align: center;
-        }
+            }
         
         h1 {
             font-size: 200px;
             line-height: 0.15em;
-            font-weight: 100;
+            font-weight: normal;
+            }
+        
+        .w {
+            letter-spacing: -0.075em;
         }
         
         /* Layout - Ignore the code below this comment */
@@ -35,14 +36,14 @@
 <body>
   
    <figure>
-        <h1>Yellowing</h1>
+        <h1>Wave</h1>
         <figcaption>Without Kerning</figcaption>
     </figure>
     
     <figure>
-        <h1>Yellowing</h1>
-        <figcaption>With Kerning JS</figcaption>
+        <h1><span class="w">W</span>ave</h1>
+        <figcaption>With Kerning</figcaption>
     </figure>
-
+    
 </body>
 </html>

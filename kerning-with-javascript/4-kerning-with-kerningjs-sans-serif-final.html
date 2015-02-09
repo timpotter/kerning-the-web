@@ -4,11 +4,13 @@
 	<meta charset="utf-8" />
 	<title>Kerning with CSS</title>
 	<!-- Add JQuery - a neat JavaScript library that allows you to do cool things -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<!-- Add Kerning.js script from http://kerningjs.com/ -->
+	<script src="kerning.js"></script>
 	
 	<style>
 		body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
         
@@ -16,6 +18,11 @@
             font-size: 200px;
             line-height: 0.15em;
             font-weight: 100;
+        }
+        
+        .yellowing {
+            -letter-kern: -0.135em 0 -0.01em 0 0 0 -0.03em -0.02em 0;
+        
         }
         
         /* Layout - Ignore the code below this comment */
@@ -40,7 +47,7 @@
     </figure>
     
     <figure>
-        <h1>Yellowing</h1>
+        <h1 class="yellowing">Yellowing</h1>
         <figcaption>With Kerning JS</figcaption>
     </figure>
 

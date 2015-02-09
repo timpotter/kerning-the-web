@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Kerning with CSS</title>
+	<!-- JQuery - a neat JavaScript library that allows you to do cool things -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- Kerning.js script from http://kerningjs.com/ -->
+	<script src="kerning.js"></script>
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	
+	<style>
+		body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        h1 {
+            font-size: 200px;
+            line-height: 0.15em;
+            font-weight: bold;
+        }
+        
+        .groovy {
+            -letter-kern: -0.07em -0.06em -0.025em -0.08em 0.07em 0 ;
+            -letter-color: -letter-repeats(even: #F62459, odd: #19B5FE);
+            -letter-transform: -letter-repeats(
+                2n+1: translate3d(0,-0.08em,0),
+                even: translate3d(0,0.08em,0)
+            );
+            /* Text Shadow L-R, T-B, Color */
+            text-shadow: 
+                0.025em 0.05em #F9BF3B,
+                0.05em 0.1em #E5E5E5;
+        }
+        
+        
+        /* Layout - Ignore the code below this comment */
+        
+        figcaption {
+            border-top: 1px solid #ececec;
+            color: #ccc;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-top: 20px;
+        }
+        
+        
+	</style>
+</head>
+<body>
+  
+   <figure>
+        <h1>Groovy</h1>
+        <figcaption>Without Kerning</figcaption>
+    </figure>
+    
+    <figure>
+        <h1 class="groovy">Groovy</h1>
+        <figcaption>With Kerning JS</figcaption>
+    </figure>
+
+</body>
+</html>

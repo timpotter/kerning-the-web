@@ -1,9 +1,10 @@
-<!-- 
+<!--
 
-The text-rendering property is not defined in any CSS standard. It's actually an SVG property. However, Gecko/WebKit/Blink browsers let you apply this property to HTML elements. There are however significant, effectively fatal performance problems (such as 30-second loading delays, or longer) on mobile devices when using optimizeLegibility for long pages. Apply it only if you know what the maximum text length will be - http://css-tricks.com/almanac/properties/t/text-rendering 
+The font-kerning CSS property controls the usage of the kerning information; that is, it controls how letters are spaced. The kerning information is stored in the font, and if the font is well-kerned, this feature allows spacing between characters to be very similar, whatever the characters are - https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning
+
+Currently there is limited browser support for font-kerning.
 
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +23,10 @@ The text-rendering property is not defined in any CSS standard. It's actually an
             text-transform: uppercase;
         }
         
+        .kerning {
+            font-kerning: normal;
+        }
+        
         /* Layout - Ignore the code below this comment */
         
         figcaption {
@@ -37,15 +42,15 @@ The text-rendering property is not defined in any CSS standard. It's actually an
 	</style>
 </head>
 <body>
-  
+    
    <figure>
         <h1>Advantage</h1>
-        <figcaption>Without Text Rendering</figcaption>
+        <figcaption>Without CSS3 Font Kerning</figcaption>
     </figure>
     
     <figure>
-        <h1>Advantage</h1>
-        <figcaption>With Text Rendering</figcaption>
+        <h1 class="kerning">Advantage</h1>
+        <figcaption>With CSS3 Font Kerning</figcaption>
     </figure>
     
 </body>
